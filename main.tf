@@ -14,16 +14,3 @@ module "nat" {
 
   cidr_blocks = "${var.cidr_blocks}"
 }
-
-resource "aws_eip" "nat" {
-  vpc = true
-
-  count = "${var.az_count}"
-}
-
-resource "aws_nat_gateway" "nat" {
-  count = "${var.az_count}"
-
-  subnet_id = "${element(split(" ", module.nat.subnet_ids), count.index)}"
-  allocation_id = "${element(aws_eip.nat.*.id, count.index)}"
-}
