@@ -1,5 +1,6 @@
 {
   "require": [
-    "env-imma-dev"
+    "env-imma-dev",
+    "app-nat"
   ]
 }
