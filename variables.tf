@@ -5,4 +5,7 @@ variable "context_env" {}
 
 variable "az_count" {}
 
-variable "cidr_blocks" {}
+variable "nat_cidrs" {}
+variable "vpn_cidrs" {}
+variable "jump_cidrs" {}
+variable "consul_cidrs" {}
