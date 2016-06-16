@@ -1,11 +1,11 @@
 {
   "require": [
     "wtf",
-    "env-imma-dev",
     "app-nat",
     "app-vpn",
     "app-jump",
     "app-consul",
-    "app-cache"
+    "app-cache",
+    "env-imma-dev"
   ]
 }
