@@ -1,10 +1,10 @@
-variable "nat_cidrs" {}
-variable "vpn_cidrs" {}
-variable "jump_cidrs" {}
-variable "consul_cidrs" {}
-variable "cache_cidrs" {}
+variable "nat_cidrs"    { default = [ "172.31.0.64/28", "172.31.0.80/28" ] }
+variable "vpn_cidrs"    { default = [ "172.31.0.96/28", "172.31.0.112/28" ] }
+variable "jump_cidrs"   { default = [ "172.31.0.128/28", "172.31.0.144/28" ] }
+variable "consul_cidrs" { default = [ "172.31.0.160/28", "172.31.0.176/28" ] }
+variable "cache_cidrs"  { default = [ "172.31.0.192/28", "172.31.0.208/28" ] }
 
-variable "az_count" {}
+variable "az_count"     { default = 2 }
 
 provider "aws" { }
 
