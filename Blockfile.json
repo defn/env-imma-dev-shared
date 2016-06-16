@@ -1,5 +1,6 @@
 {
   "require": [
+    "wtf",
     "env-imma-dev",
     "app-nat",
     "app-vpn",
