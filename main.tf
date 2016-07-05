@@ -18,6 +18,7 @@ module "consul" {
   cidr_blocks = "${split(" ",null_resource.cidrs.triggers.consul)}"
 
   az_count = "${var.az_count}"
+  nat_count = "${var.az_count}"
 
   app_name = "consul"
 }
